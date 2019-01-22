@@ -1,0 +1,151 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 === Run information ===\
+\
+Scheme:       weka.associations.Apriori -N 100 -T 1 -C 1.1 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c 12\
+Relation:     bankdata_csv_all-weka.filters.unsupervised.attribute.Discretize-B10-M-1.0-Rfirst-last-precision6\
+Instances:    600\
+Attributes:   12\
+              id\
+              age\
+              sex\
+              region\
+              income\
+              married\
+              children\
+              car\
+              save_act\
+              current_act\
+              mortgage\
+              pep\
+=== Associator model (full training set) ===\
+\
+\
+Apriori\
+=======\
+\
+Minimum support: 0.15 (90 instances)\
+Minimum metric <lift>: 1.1\
+Number of cycles performed: 17\
+\
+Generated sets of large itemsets:\
+\
+Size of set of large itemsets L(1): 23\
+\
+Size of set of large itemsets L(2): 108\
+\
+Size of set of large itemsets L(3): 128\
+\
+Size of set of large itemsets L(4): 33\
+\
+Size of set of large itemsets L(5): 1\
+\
+Best rules found:\
+\
+  1. children='(0.9-1.2]' 135 ==> pep=YES 110    conf:(0.81) < lift:(1.78)> lev:(0.08) [48] conv:(2.82)\
+  2. pep=YES 274 ==> children='(0.9-1.2]' 110    conf:(0.4) < lift:(1.78)> lev:(0.08) [48] conv:(1.29)\
+  3. mortgage=NO pep=NO 209 ==> married=YES children='(-inf-0.3]' 104    conf:(0.5) < lift:(1.66)> lev:(0.07) [41] conv:(1.38)\
+  4. married=YES children='(-inf-0.3]' 180 ==> mortgage=NO pep=NO 104    conf:(0.58) < lift:(1.66)> lev:(0.07) [41] conv:(1.52)\
+  5. married=YES children='(-inf-0.3]' save_act=YES 119 ==> pep=NO 107    conf:(0.9) < lift:(1.65)> lev:(0.07) [42] conv:(4.18)\
+  6. pep=NO 326 ==> married=YES children='(-inf-0.3]' save_act=YES 107    conf:(0.33) < lift:(1.65)> lev:(0.07) [42] conv:(1.19)\
+  7. married=YES children='(-inf-0.3]' mortgage=NO 116 ==> pep=NO 104    conf:(0.9) < lift:(1.65)> lev:(0.07) [40] conv:(4.07)\
+  8. pep=NO 326 ==> married=YES children='(-inf-0.3]' mortgage=NO 104    conf:(0.32) < lift:(1.65)> lev:(0.07) [40] conv:(1.18)\
+  9. married=YES pep=NO 242 ==> children='(-inf-0.3]' mortgage=NO 104    conf:(0.43) < lift:(1.57)> lev:(0.06) [37] conv:(1.27)\
+ 10. children='(-inf-0.3]' mortgage=NO 164 ==> married=YES pep=NO 104    conf:(0.63) < lift:(1.57)> lev:(0.06) [37] conv:(1.6)\
+ 11. married=NO mortgage=NO 130 ==> pep=YES 92    conf:(0.71) < lift:(1.55)> lev:(0.05) [32] conv:(1.81)\
+ 12. pep=YES 274 ==> married=NO mortgage=NO 92    conf:(0.34) < lift:(1.55)> lev:(0.05) [32] conv:(1.17)\
+ 13. married=YES pep=NO 242 ==> children='(-inf-0.3]' save_act=YES 107    conf:(0.44) < lift:(1.52)> lev:(0.06) [36] conv:(1.26)\
+ 14. children='(-inf-0.3]' save_act=YES 174 ==> married=YES pep=NO 107    conf:(0.61) < lift:(1.52)> lev:(0.06) [36] conv:(1.53)\
+ 15. married=YES children='(-inf-0.3]' 180 ==> save_act=YES pep=NO 107    conf:(0.59) < lift:(1.52)> lev:(0.06) [36] conv:(1.48)\
+ 16. save_act=YES pep=NO 235 ==> married=YES children='(-inf-0.3]' 107    conf:(0.46) < lift:(1.52)> lev:(0.06) [36] conv:(1.28)\
+ 17. married=NO 204 ==> mortgage=NO pep=YES 92    conf:(0.45) < lift:(1.49)> lev:(0.05) [30] conv:(1.26)\
+ 18. mortgage=NO pep=YES 182 ==> married=NO 92    conf:(0.51) < lift:(1.49)> lev:(0.05) [30] conv:(1.32)\
+ 19. married=YES 396 ==> children='(-inf-0.3]' mortgage=NO pep=NO 104    conf:(0.26) < lift:(1.47)> lev:(0.06) [33] conv:(1.11)\
+ 20. children='(-inf-0.3]' mortgage=NO pep=NO 107 ==> married=YES 104    conf:(0.97) < lift:(1.47)> lev:(0.06) [33] conv:(9.1)\
+ 21. married=YES children='(-inf-0.3]' current_act=YES 133 ==> pep=NO 105    conf:(0.79) < lift:(1.45)> lev:(0.05) [32] conv:(2.09)\
+ 22. pep=NO 326 ==> married=YES children='(-inf-0.3]' current_act=YES 105    conf:(0.32) < lift:(1.45)> lev:(0.05) [32] conv:(1.14)\
+ 23. pep=NO 326 ==> married=YES children='(-inf-0.3]' 141    conf:(0.43) < lift:(1.44)> lev:(0.07) [43] conv:(1.23)\
+ 24. married=YES children='(-inf-0.3]' 180 ==> pep=NO 141    conf:(0.78) < lift:(1.44)> lev:(0.07) [43] conv:(2.06)\
+ 25. married=YES children='(-inf-0.3]' 180 ==> current_act=YES pep=NO 105    conf:(0.58) < lift:(1.43)> lev:(0.05) [31] conv:(1.41)\
+ 26. current_act=YES pep=NO 244 ==> married=YES children='(-inf-0.3]' 105    conf:(0.43) < lift:(1.43)> lev:(0.05) [31] conv:(1.22)\
+ 27. married=YES mortgage=NO 261 ==> children='(-inf-0.3]' pep=NO 104    conf:(0.4) < lift:(1.43)> lev:(0.05) [31] conv:(1.19)\
+ 28. children='(-inf-0.3]' pep=NO 167 ==> married=YES mortgage=NO 104    conf:(0.62) < lift:(1.43)> lev:(0.05) [31] conv:(1.47)\
+ 29. current_act=YES pep=NO 244 ==> children='(-inf-0.3]' save_act=YES 101    conf:(0.41) < lift:(1.43)> lev:(0.05) [30] conv:(1.2)\
+ 30. children='(-inf-0.3]' save_act=YES 174 ==> current_act=YES pep=NO 101    conf:(0.58) < lift:(1.43)> lev:(0.05) [30] conv:(1.4)\
+ 31. children='(-inf-0.3]' save_act=YES current_act=YES 133 ==> pep=NO 101    conf:(0.76) < lift:(1.4)> lev:(0.05) [28] conv:(1.84)\
+ 32. pep=NO 326 ==> children='(-inf-0.3]' save_act=YES current_act=YES 101    conf:(0.31) < lift:(1.4)> lev:(0.05) [28] conv:(1.12)\
+ 33. children='(-inf-0.3]' 263 ==> married=YES save_act=YES pep=NO 107    conf:(0.41) < lift:(1.39)> lev:(0.05) [30] conv:(1.19)\
+ 34. married=YES save_act=YES pep=NO 175 ==> children='(-inf-0.3]' 107    conf:(0.61) < lift:(1.39)> lev:(0.05) [30] conv:(1.42)\
+ 35. married=YES save_act=YES 277 ==> children='(-inf-0.3]' pep=NO 107    conf:(0.39) < lift:(1.39)> lev:(0.05) [29] conv:(1.17)\
+ 36. children='(-inf-0.3]' pep=NO 167 ==> married=YES save_act=YES 107    conf:(0.64) < lift:(1.39)> lev:(0.05) [29] conv:(1.47)\
+ 37. children='(-inf-0.3]' 263 ==> married=YES mortgage=NO pep=NO 104    conf:(0.4) < lift:(1.39)> lev:(0.05) [29] conv:(1.18)\
+ 38. married=YES mortgage=NO pep=NO 171 ==> children='(-inf-0.3]' 104    conf:(0.61) < lift:(1.39)> lev:(0.05) [29] conv:(1.41)\
+ 39. children='(-inf-0.3]' save_act=YES 174 ==> pep=NO 131    conf:(0.75) < lift:(1.39)> lev:(0.06) [36] conv:(1.81)\
+ 40. pep=NO 326 ==> children='(-inf-0.3]' save_act=YES 131    conf:(0.4) < lift:(1.39)> lev:(0.06) [36] conv:(1.18)\
+ 41. sex=FEMALE married=YES 195 ==> mortgage=NO pep=NO 93    conf:(0.48) < lift:(1.37)> lev:(0.04) [25] conv:(1.23)\
+ 42. mortgage=NO pep=NO 209 ==> sex=FEMALE married=YES 93    conf:(0.44) < lift:(1.37)> lev:(0.04) [25] conv:(1.21)\
+ 43. children='(-inf-0.3]' 263 ==> married=YES current_act=YES pep=NO 105    conf:(0.4) < lift:(1.35)> lev:(0.05) [27] conv:(1.17)\
+ 44. married=YES current_act=YES pep=NO 177 ==> children='(-inf-0.3]' 105    conf:(0.59) < lift:(1.35)> lev:(0.05) [27] conv:(1.36)\
+ 45. children='(-inf-0.3]' 263 ==> married=YES pep=NO 141    conf:(0.54) < lift:(1.33)> lev:(0.06) [34] conv:(1.28)\
+ 46. married=YES pep=NO 242 ==> children='(-inf-0.3]' 141    conf:(0.58) < lift:(1.33)> lev:(0.06) [34] conv:(1.33)\
+ 47. married=NO 204 ==> current_act=YES pep=YES 95    conf:(0.47) < lift:(1.32)> lev:(0.04) [23] conv:(1.2)\
+ 48. current_act=YES pep=YES 211 ==> married=NO 95    conf:(0.45) < lift:(1.32)> lev:(0.04) [23] conv:(1.19)\
+ 49. married=YES current_act=YES 293 ==> save_act=YES mortgage=NO pep=NO 91    conf:(0.31) < lift:(1.31)> lev:(0.04) [21] conv:(1.1)\
+ 50. save_act=YES mortgage=NO pep=NO 142 ==> married=YES current_act=YES 91    conf:(0.64) < lift:(1.31)> lev:(0.04) [21] conv:(1.4)\
+ 51. married=YES pep=NO 242 ==> children='(-inf-0.3]' current_act=YES 105    conf:(0.43) < lift:(1.31)> lev:(0.04) [24] conv:(1.17)\
+ 52. children='(-inf-0.3]' current_act=YES 199 ==> married=YES pep=NO 105    conf:(0.53) < lift:(1.31)> lev:(0.04) [24] conv:(1.25)\
+ 53. children='(-inf-0.3]' current_act=YES 199 ==> save_act=YES pep=NO 101    conf:(0.51) < lift:(1.3)> lev:(0.04) [23] conv:(1.22)\
+ 54. save_act=YES pep=NO 235 ==> children='(-inf-0.3]' current_act=YES 101    conf:(0.43) < lift:(1.3)> lev:(0.04) [23] conv:(1.16)\
+ 55. married=NO 204 ==> pep=YES 120    conf:(0.59) < lift:(1.29)> lev:(0.04) [26] conv:(1.3)\
+ 56. pep=YES 274 ==> married=NO 120    conf:(0.44) < lift:(1.29)> lev:(0.04) [26] conv:(1.17)\
+ 57. married=YES current_act=YES 293 ==> children='(-inf-0.3]' pep=NO 105    conf:(0.36) < lift:(1.29)> lev:(0.04) [23] conv:(1.12)\
+ 58. children='(-inf-0.3]' pep=NO 167 ==> married=YES current_act=YES 105    conf:(0.63) < lift:(1.29)> lev:(0.04) [23] conv:(1.36)\
+ 59. children='(-inf-0.3]' 263 ==> save_act=YES current_act=YES pep=NO 101    conf:(0.38) < lift:(1.29)> lev:(0.04) [22] conv:(1.13)\
+ 60. save_act=YES current_act=YES pep=NO 179 ==> children='(-inf-0.3]' 101    conf:(0.56) < lift:(1.29)> lev:(0.04) [22] conv:(1.27)\
+ 61. married=NO current_act=YES 162 ==> pep=YES 95    conf:(0.59) < lift:(1.28)> lev:(0.04) [21] conv:(1.29)\
+ 62. pep=YES 274 ==> married=NO current_act=YES 95    conf:(0.35) < lift:(1.28)> lev:(0.04) [21] conv:(1.11)\
+ 63. married=YES 396 ==> save_act=YES mortgage=NO pep=NO 120    conf:(0.3) < lift:(1.28)> lev:(0.04) [26] conv:(1.09)\
+ 64. save_act=YES mortgage=NO pep=NO 142 ==> married=YES 120    conf:(0.85) < lift:(1.28)> lev:(0.04) [26] conv:(2.1)\
+ 65. married=YES 396 ==> children='(-inf-0.3]' pep=NO 141    conf:(0.36) < lift:(1.28)> lev:(0.05) [30] conv:(1.12)\
+ 66. children='(-inf-0.3]' pep=NO 167 ==> married=YES 141    conf:(0.84) < lift:(1.28)> lev:(0.05) [30] conv:(2.1)\
+ 67. married=YES 396 ==> save_act=YES current_act=YES mortgage=NO pep=NO 91    conf:(0.23) < lift:(1.28)> lev:(0.03) [19] conv:(1.06)\
+ 68. save_act=YES current_act=YES mortgage=NO pep=NO 108 ==> married=YES 91    conf:(0.84) < lift:(1.28)> lev:(0.03) [19] conv:(2.04)\
+ 69. children='(-inf-0.3]' 263 ==> save_act=YES pep=NO 131    conf:(0.5) < lift:(1.27)> lev:(0.05) [27] conv:(1.2)\
+ 70. save_act=YES pep=NO 235 ==> children='(-inf-0.3]' 131    conf:(0.56) < lift:(1.27)> lev:(0.05) [27] conv:(1.26)\
+ 71. married=YES save_act=YES current_act=YES 206 ==> mortgage=NO pep=NO 91    conf:(0.44) < lift:(1.27)> lev:(0.03) [19] conv:(1.16)\
+ 72. mortgage=NO pep=NO 209 ==> married=YES save_act=YES current_act=YES 91    conf:(0.44) < lift:(1.27)> lev:(0.03) [19] conv:(1.15)\
+ 73. married=YES current_act=YES 293 ==> mortgage=NO pep=NO 129    conf:(0.44) < lift:(1.26)> lev:(0.04) [26] conv:(1.16)\
+ 74. mortgage=NO pep=NO 209 ==> married=YES current_act=YES 129    conf:(0.62) < lift:(1.26)> lev:(0.04) [26] conv:(1.32)\
+ 75. married=YES mortgage=NO 261 ==> sex=FEMALE pep=NO 93    conf:(0.36) < lift:(1.26)> lev:(0.03) [19] conv:(1.11)\
+ 76. sex=FEMALE pep=NO 170 ==> married=YES mortgage=NO 93    conf:(0.55) < lift:(1.26)> lev:(0.03) [19] conv:(1.23)\
+ 77. pep=NO 326 ==> sex=FEMALE children='(-inf-0.3]' 90    conf:(0.28) < lift:(1.25)> lev:(0.03) [18] conv:(1.07)\
+ 78. sex=FEMALE children='(-inf-0.3]' 132 ==> pep=NO 90    conf:(0.68) < lift:(1.25)> lev:(0.03) [18] conv:(1.4)\
+ 79. married=YES 396 ==> children='(-inf-0.3]' current_act=YES pep=NO 105    conf:(0.27) < lift:(1.25)> lev:(0.04) [21] conv:(1.07)\
+ 80. children='(-inf-0.3]' current_act=YES pep=NO 127 ==> married=YES 105    conf:(0.83) < lift:(1.25)> lev:(0.04) [21] conv:(1.88)\
+ 81. married=YES save_act=YES 277 ==> current_act=YES mortgage=NO pep=NO 91    conf:(0.33) < lift:(1.25)> lev:(0.03) [18] conv:(1.09)\
+ 82. current_act=YES mortgage=NO pep=NO 158 ==> married=YES save_act=YES 91    conf:(0.58) < lift:(1.25)> lev:(0.03) [18] conv:(1.25)\
+ 83. married=YES save_act=YES 277 ==> mortgage=NO pep=NO 120    conf:(0.43) < lift:(1.24)> lev:(0.04) [23] conv:(1.14)\
+ 84. mortgage=NO pep=NO 209 ==> married=YES save_act=YES 120    conf:(0.57) < lift:(1.24)> lev:(0.04) [23] conv:(1.25)\
+ 85. sex=FEMALE married=YES mortgage=NO 138 ==> pep=NO 93    conf:(0.67) < lift:(1.24)> lev:(0.03) [18] conv:(1.37)\
+ 86. pep=NO 326 ==> sex=FEMALE married=YES mortgage=NO 93    conf:(0.29) < lift:(1.24)> lev:(0.03) [18] conv:(1.07)\
+ 87. married=YES 396 ==> mortgage=NO pep=NO 171    conf:(0.43) < lift:(1.24)> lev:(0.06) [33] conv:(1.14)\
+ 88. mortgage=NO pep=NO 209 ==> married=YES 171    conf:(0.82) < lift:(1.24)> lev:(0.06) [33] conv:(1.82)\
+ 89. married=YES 396 ==> children='(-inf-0.3]' save_act=YES pep=NO 107    conf:(0.27) < lift:(1.24)> lev:(0.03) [20] conv:(1.07)\
+ 90. children='(-inf-0.3]' save_act=YES pep=NO 131 ==> married=YES 107    conf:(0.82) < lift:(1.24)> lev:(0.03) [20] conv:(1.78)\
+ 91. married=YES 396 ==> current_act=YES mortgage=NO pep=NO 129    conf:(0.33) < lift:(1.24)> lev:(0.04) [24] conv:(1.09)\
+ 92. current_act=YES mortgage=NO pep=NO 158 ==> married=YES 129    conf:(0.82) < lift:(1.24)> lev:(0.04) [24] conv:(1.79)\
+ 93. children='(-inf-0.3]' 263 ==> car=NO pep=NO 91    conf:(0.35) < lift:(1.24)> lev:(0.03) [17] conv:(1.09)\
+ 94. car=NO pep=NO 168 ==> children='(-inf-0.3]' 91    conf:(0.54) < lift:(1.24)> lev:(0.03) [17] conv:(1.21)\
+ 95. married=YES 396 ==> sex=FEMALE mortgage=NO pep=NO 93    conf:(0.23) < lift:(1.23)> lev:(0.03) [17] conv:(1.05)\
+ 96. sex=FEMALE mortgage=NO pep=NO 115 ==> married=YES 93    conf:(0.81) < lift:(1.23)> lev:(0.03) [17] conv:(1.7)\
+ 97. pep=NO 326 ==> sex=FEMALE married=YES save_act=YES 91    conf:(0.28) < lift:(1.22)> lev:(0.03) [16] conv:(1.07)\
+ 98. sex=FEMALE married=YES save_act=YES 137 ==> pep=NO 91    conf:(0.66) < lift:(1.22)> lev:(0.03) [16] conv:(1.33)\
+ 99. current_act=YES pep=NO 244 ==> married=YES save_act=YES mortgage=NO 91    conf:(0.37) < lift:(1.22)> lev:(0.03) [16] conv:(1.1)\
+100. married=YES save_act=YES mortgage=NO 184 ==> current_act=YES pep=NO 91    conf:(0.49) < lift:(1.22)> lev:(0.03) [16] conv:(1.16)\
+\
+}
